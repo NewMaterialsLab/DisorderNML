@@ -1,0 +1,41 @@
+SYSTEM=Bi1Cu1O1Se1_ICSD_189174
+NELM = 120
+NELMIN=2
+LPLANE=.TRUE.
+LSCALU=.FALSE.
+IBRION=2                                        # relax with Conjugate Gradient  
+NSW=0                                          # relax for long              
+ISIF=3                                          # relax appropriately         
+ISYM=2                                          # SYMMMETRY=ON
+LWAVE=.FALSE.                                   # WAVECAR=OFF
+LCHARG=.FALSE.                                  # CHGCAR=OFF
+LDAU=.TRUE.                                     # AFLOW LSDA+U
+#LDAU_SPECIES=Ba K Ni Nb O                      # LDAU species 
+LDAUL=0 0 2 2 0                                 # l-quantum number for which the on site interaction is added (Default 2) automatic LDAUL table
+LDAUU=0 0 5.1 2.1 0                             # UEFF parameter. Automatic LDAUU table
+LDAUJ=0 0 0 0 0                                 # J parameter (if used). Automatic LDAUJ table
+LDAUTYPE=2                                      # Type of LDA+U. 
+LMAXMIX=4                                       # Controls up to which l-quantum number the onsite PAW charge densities are passed through the charge density mixer. 
+LDAUPRINT=0                                     # Controls verbosity of the L(S)DA+U module. (Default 0) # AFLOW LSDA+U
+PREC=High                                       # avoid wrap around errors
+ENCUT=500                                       # 1.4*ENMAX (400) of pseudopotentials 
+ALGO=NORMAL                                       # ALGO = Fast: IALGO=38 is used for the initial phase, and then VASP switches to IALGO=48
+ISMEAR=-5                                        # for default (as metal)
+SIGMA=0.01   
+ISPIN = 2
+
+DOS
+
+EMIN = -10
+EMAX = 10
+NEDOS=9999
+LORBIT=10
+
+LOPTICS = TRUE
+ADDGRID = TRUE
+
+
+LREAL = AUTO
+EDIFF=0.00000001
+NCORE = 16
+ 
